@@ -1,29 +1,12 @@
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/styles.css">
-    <title>My Contacts</title>
-  </head>
-  <body>
-    <h1>Current Contact List</h1>
-    <table style="width:100%">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email Address</th>
-  </tr>
-
-  <tr>
+<div class="contact_count">
+  <h2>There are current <span class="contact_number"><%= @contacts.count %></span> contacts</h2>
+</div>
+  <ul class="contact_list">
     <%@contacts.each do |contact|%>
-    <td><%= contact.first_name -%></td>
-    <td><%= contact.last_name -%></td>
-    <td><%= contact.email -%></td>
-  </tr>
+    <li class="contact_list"><%= contact.first_name -%> <%= contact.last_name -%> (<%= contact.email -%>)</li>
+    <div class="contact_edit">
+    <a class="contact_list" href="#">Edit</a> | <a class="contact_list" href="#">Delete</a>
+    </div>
     <% end %>
-</table>
-
-    <a href="/">Home</a>
-  </body>
-</html>
+  </ul>

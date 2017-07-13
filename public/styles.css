@@ -96,3 +96,8 @@ div.about_us {
 p {
   padding: 10px;
 }
+
+div.single_contact {
+    width: 90%;
+    margin: 0 auto;
+}

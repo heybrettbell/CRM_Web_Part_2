@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles.css">
+    <title>My Contacts</title>
+  </head>
+  <body>
+    <h1>Current Contact List</h1>
+    <table style="width:100%">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+  </tr>
+
+  <tr>
+    <%@contacts.each do |contact|%>
+    <td><%= contact.first_name -%></td>
+    <td><%= contact.last_name -%></td>
+    <td><%= contact.email -%></td>
+  </tr>
+    <% end %>
+</table>
+
+    <a href="/">Home</a>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+td {
+    padding: 0 20px;
+}
+
+th {
+    text-align: left;
+    padding: 0 20px 10px;
+}
+
+p {
+    width: 50%;
+}
